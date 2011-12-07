@@ -17,6 +17,7 @@ body {
 }
 
 #nav-links {
+  display: block;
 	text-align: center;
 	color: #8e240b;
   font-size: 24px;
@@ -41,7 +42,7 @@ body {
 }
 
 #content {
-  width: 530px;
+  width: 535px;
   margin: 0 auto;
   text-align: justify;
   font-family: 'Georgia', serif;
