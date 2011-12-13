@@ -14,13 +14,11 @@ $(function(){
 
 var Site = {
   default: function() {
-    console.log('No JS Action for this URL.');
+    // Any JavaScript that needs to run on every page should go here.
   },
 
   upcoming: function() {
-    $.getJSON("http://api.meetup.com/2/events.json/?group_id=1366859&key=91526d36f317c59191cc632444&callback=?",
-    function (data) {
-      console.log(data);
+    $.getJSON("http://api.meetup.com/2/events.json/?group_id=1366859&key=91526d36f317c59191cc632444&callback=?", function (data) {
       var nextMeetup = data.results[0];
       var date = new Date(nextMeetup.time);
       var address = [nextMeetup.venue.address_1, nextMeetup.venue.address_2, nextMeetup.venue.city, nextMeetup.venue.state, nextMeetup.venue.zip].join(', ')
