@@ -1,5 +1,5 @@
 $(function(){
-  var page_name = $('body').data('name');
+  var page_name = $('body').attr('class');
 
   if(page_name){
     try{
