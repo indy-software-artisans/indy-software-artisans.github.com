@@ -22,4 +22,4 @@ name: upcoming
   try again later.
 </p>
 
-<img src="" id="next_meetup_venue_map" alt="Map to Venue" style="display:none;"/>
+<img src="/static/blank.gif" id="next_meetup_venue_map" alt="Map to Venue" style="display:none;"/>
