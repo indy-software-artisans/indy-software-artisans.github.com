@@ -30,7 +30,11 @@ var Site = {
       $('#next_meetup_rsvpcount').html(nextMeetup.yes_rsvp_count);
       $('#next_meetup_event_url').attr('href', nextMeetup.event_url);
 
-      $('#next_meetup_venue_map').attr('src', 'http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=500x400&markers='+address).show();
+      var map = $('#next_meetup_venue_map');
+      map.attr('src', 'http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=535x400&markers='+address);
+      map.parent('a').attr('href', 'http://maps.google.com/maps?q='+address);
+      map.parent('a').attr('target', '_blank')
+      map.show();
     });
   }
 }
