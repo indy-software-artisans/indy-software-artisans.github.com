@@ -18,7 +18,7 @@ var Site = {
   },
 
   upcoming: function() {
-    var signed_url = "http://api.meetup.com/2/events.json/?group_id=1366859&status=upcoming&order=time&desc=false&offset=0&callback=%3F%2C&format=json&page=200&fields=&sig_id=7728671&sig=79e04bfe18e4845882f65aebc76c89b33cfbaf71"
+    var signed_url = "http://api.meetup.com/2/events.json/?group_id=1366859&status=upcoming&_=1323957798477&sig_id=7728671&order=time&desc=false&sig=79e04bfe18e4845882f65aebc76c89b33cfbaf71&offset=0&callback=?&format=json&page=200&fields=&sig_id=7728671&sig=73b75f3ee416fb0891de36fae02a9aed6cfd10d3"
     $.getJSON(signed_url, function (data) {
       var nextMeetup = data.results[0];
       var date = new Date(nextMeetup.time);
