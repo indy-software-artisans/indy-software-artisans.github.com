@@ -32,7 +32,7 @@ var Site = {
 
       var map = $('#next_meetup_venue_map');
       map.attr('src', 'http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=535x400&markers='+address);
-      map.parent('a').attr('href', 'http://maps.google.com/maps?q='+address);
+      map.parent('a').attr('href', 'http://maps.google.com/maps?daddr='+address);
       map.parent('a').attr('target', '_blank')
       map.show();
     });
