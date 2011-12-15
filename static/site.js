@@ -18,10 +18,11 @@ var Site = {
   },
 
   upcoming: function() {
-    $.getJSON("http://api.meetup.com/2/events.json/?group_id=1366859&key=91526d36f317c59191cc632444&callback=?", function (data) {
+    var signed_url = "http://api.meetup.com/2/events.json/?group_id=1366859&status=upcoming&order=time&desc=false&offset=0&callback=%3F%2C&format=json&page=200&fields=&sig_id=7728671&sig=79e04bfe18e4845882f65aebc76c89b33cfbaf71"
+    $.getJSON(signed_url, function (data) {
       var nextMeetup = data.results[0];
       var date = new Date(nextMeetup.time);
-      var address = [nextMeetup.venue.address_1, nextMeetup.venue.address_2, nextMeetup.venue.city, nextMeetup.venue.state, nextMeetup.venue.zip].join(', ')
+      var address = [nextMeetup.venue.address_1, nextMeetup.venue.address_2, nextMeetup.venue.city, nextMeetup.venue.state, nextMeetup.venue.zip].join(', ');
       $('#next_meetup_name').html(nextMeetup.name);
       $('#next_meetup_description').html(nextMeetup.description);
       $('#next_meetup_address').html(nextMeetup.venue.name + ', ' + address);
