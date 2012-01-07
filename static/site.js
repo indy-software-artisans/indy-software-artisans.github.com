@@ -3,7 +3,7 @@ $(function(){
 
   if(page_name){
     try{
-      eval('Site.'+page_name+'();');
+      Site[page_name]();
     } catch(e) {
       Site.default();
     }
