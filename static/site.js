@@ -22,7 +22,7 @@ var Site = {
     $.getJSON(signed_url, function (data) {
       var nextMeetup = data.results[0];
       var date = new Date(nextMeetup.time);
-      var address = [nextMeetup.venue.address_1, nextMeetup.venue.address_2, nextMeetup.venue.city, nextMeetup.venue.state, nextMeetup.venue.zip].join(', ');
+      var address = [nextMeetup.venue.address_1, nextMeetup.venue.address_2, nextMeetup.venue.city, nextMeetup.venue.state].join(', ');
       $('#next_meetup_name').html(nextMeetup.name);
       $('#next_meetup_description').html(nextMeetup.description);
       $('#next_meetup_address').html(nextMeetup.venue.name + ', ' + address);
