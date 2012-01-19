@@ -17,6 +17,7 @@ A group typically goes out for beer afterwards
 
 SEP  
 4 Center Green  
-Carmel, IN (map)  
+Carmel, IN ([map](http://g.co/maps/stbmk))  
 
-Park in the free parking garage, 4th floor... follow the signs 
+Park in the free parking garage  
+Meeting is on the 4th floor... follow the signs!
