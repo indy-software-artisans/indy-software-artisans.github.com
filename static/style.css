@@ -4,39 +4,59 @@ body {
 }
 
 img {
-	border: 0;
+  border: 0;
 }
 
 #container {
-	min-width: 960px;
+  min-width: 960px;
   position: relative;
-	padding-top: 100px;
+  padding-top: 100px;
   margin-left: 40px;
 }
 
 #group-name {
-	text-align: center;
-	font-family: 'Smythe', 'Garamond', 'Georgia', serif;
-	font-size: 64px;
-	font-weight: normal;
+  text-align: center;
+  font-family: 'Smythe', 'Garamond', 'Georgia', serif;
+  font-size: 64px;
+  font-weight: normal;
   margin: 15px 0px;
 }
 
 #nav-links {
   display: block;
-	text-align: center;
-	color: #8e240b;
+  text-align: center;
+  color: #8e240b;
   font-size: 24px;
   margin-bottom: 30px;
 }
 
-#nav-links a, #sponsors a {
-	font-family: 'Georgia', serif;
-	font-style: italic;
+#nav-links a {
+  font-family: 'Georgia', serif;
+  font-style: italic;
   text-decoration: none;
   border-bottom: 1px dotted #8e240b;
   padding: 0px 1px;
   color: #8e240b;
+}
+
+#sponsors a {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  text-decoration: none;
+  border-bottom: 1px dotted #8e240b;
+  color: #8e240b;
+}
+
+#sponsors .gold-container a {
+  border: 0;
+}
+
+#sponsors .silver-container p {
+  margin: 10px 0px 0px 0px;
+}
+
+#sponsors .sponsor-type {
+  padding-top: 10px;
 }
 
 #nav-links a:hover, #sponsors a:hover {
