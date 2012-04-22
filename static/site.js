@@ -36,5 +36,28 @@ var Site = {
       map.parent('a').attr('target', '_blank')
       map.show();
     });
+  },
+
+  contact: function() {
+    $('#contact').submit(function(e) {
+      e.preventDefault();
+
+      //honeypot spam check
+      if ($('#comment').val()) {
+        return;
+      }
+
+      var $allFields = $(".field");
+      var fieldsFilled = $.map($allFields, function(i) { 
+        return $(i).val().length != 0; 
+      });
+
+      if ($.inArray(false, fieldsFilled) === -1) {
+        this.submit();
+      } else {
+        $('#contact-error').show();
+        return;
+      }
+    });
   }
 }

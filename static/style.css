@@ -8,6 +8,7 @@ body {
   position: relative;
 	padding-top: 100px;
   margin-left: 40px;
+  padding-bottom: 50px;
 }
 
 #group-name {
@@ -62,3 +63,26 @@ body {
   color: #d0d0d0;
   font-size: 13px;
 }
+
+#submit-btn {
+  display: block;
+  float: right;
+  width: 75px;
+  font-size: 36px;
+}
+
+.input label {
+  display: block;
+}
+
+.input input, .input textarea{
+  width: 500px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.required {
+  font-weight: bold;
+  color: #8E240B;
+}
+
