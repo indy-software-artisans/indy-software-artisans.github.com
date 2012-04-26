@@ -10,7 +10,7 @@ img {
 #container {
   min-width: 960px;
   position: relative;
-  padding-top: 100px;
+  padding-top: 10px;
   margin-left: 40px;
   padding-bottom: 50px;
 }
@@ -79,7 +79,7 @@ img {
 
 #sponsors {
   position: absolute;
-  top: 150px;
+  top: 100px;
   left: 50px;
   width: 120px;
   text-align: left;
