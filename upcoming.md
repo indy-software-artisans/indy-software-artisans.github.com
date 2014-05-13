@@ -14,7 +14,7 @@ name: upcoming
 
 <p>
   So far, <span id="next_meetup_rsvpcount">unknown</span> people have RSVP'd. Secure your
-  seat and <a href="http://www.meetup.com/" id="next_meetup_event_url"> RSVP Today! </a>
+  seat and <a href="http://www.meetup.com/indysa/" id="next_meetup_event_url"> RSVP Today! </a>
 </p>
 
 <p id="next_meetup_description">
