@@ -1,6 +1,6 @@
 ---
 layout: default
-name: upcoming
+ref: upcoming
 ---
 
 <h2 id="next_meetup_name">
@@ -8,8 +8,9 @@ name: upcoming
 </h2>
 
 <p>
-  Our next meeting is <span id="next_meetup_date">Every 3rd Thursday at 6:00pm</span> at
-  <a href="#next_meetup_venue_map" id="next_meetup_address">SEP</a>.
+  Our primary meetings are held every 3rd Thursday.
+  The next one is on <span id="next_meetup_date">(Loading data...)</span> at
+  <a href="#next_meetup_venue_map" id="next_meetup_address">(Loading data...)</a>.
 </p>
 
 <p>
@@ -18,8 +19,7 @@ name: upcoming
 </p>
 
 <p id="next_meetup_description">
-  I haven't loaded the latest meetup's data from Meetup.com yet. Please wait a moment or
-  try again later.
+  Loading data from Meetup.com, please wait...
 </p>
 
 <a title="Click for Directions"><img src="/static/blank.gif" id="next_meetup_venue_map" alt="Map to Venue" style="display:none;"/></a>

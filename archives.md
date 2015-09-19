@@ -1,8 +1,11 @@
 ---
 layout: default
-name: archives
+ref: archives
 ---
 <h2>Past Meetings</h2>
+<p>
+The meetings below are listed for historical purposes. They are all of the meetings that we had before switching to Meetup.com, so they are not recorded there.
+</p>
 <ul class="past-meetings">
   <li>
     <span class="meeting-month">September 2012 - </span>

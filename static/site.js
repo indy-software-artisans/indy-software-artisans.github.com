@@ -18,15 +18,17 @@ var Site = {
   },
 
   upcoming: function() {
-    var signed_url = "http://api.meetup.com/2/events.json/?group_id=1366859&status=upcoming&_=1323957798477&sig_id=7728671&order=time&desc=false&sig=79e04bfe18e4845882f65aebc76c89b33cfbaf71&offset=0&callback=?&format=json&page=200&fields=&sig_id=7728671&sig=73b75f3ee416fb0891de36fae02a9aed6cfd10d3"
+    var signed_url = "//api.meetup.com/2/events.json/?group_id=1366859&status=upcoming&_=1323957798477&sig_id=7728671&order=time&desc=false&sig=79e04bfe18e4845882f65aebc76c89b33cfbaf71&offset=0&callback=?&format=json&page=200&fields=&sig_id=7728671&sig=73b75f3ee416fb0891de36fae02a9aed6cfd10d3"
     $.getJSON(signed_url, function (data) {
       var nextMeetup = data.results[0];
       var date = new Date(nextMeetup.time);
+	  var dateString = date.getFullYear() + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+	  var timeString = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
       var address = [nextMeetup.venue.address_1, nextMeetup.venue.address_2, nextMeetup.venue.city, nextMeetup.venue.state].join(', ');
       $('#next_meetup_name').html(nextMeetup.name);
       $('#next_meetup_description').html(nextMeetup.description);
       $('#next_meetup_address').html(nextMeetup.venue.name + ', ' + address);
-      $('#next_meetup_date').html(date.toLocaleString('%b %e, %l:%M %p'));
+      $('#next_meetup_date').html(dateString + ' at ' + timeString);
       $('#next_meetup_rsvpcount').html(nextMeetup.yes_rsvp_count);
       $('#next_meetup_event_url').attr('href', nextMeetup.event_url);
 
@@ -35,29 +37,6 @@ var Site = {
       map.parent('a').attr('href', 'http://maps.google.com/maps?daddr='+address);
       map.parent('a').attr('target', '_blank')
       map.show();
-    });
-  },
-
-  contact: function() {
-    $('#contact').submit(function(e) {
-      e.preventDefault();
-
-      //honeypot spam check
-      if ($('#comment').val()) {
-        return;
-      }
-
-      var $allFields = $(".field");
-      var fieldsFilled = $.map($allFields, function(i) { 
-        return $(i).val().length != 0; 
-      });
-
-      if ($.inArray(false, fieldsFilled) === -1) {
-        this.submit();
-      } else {
-        $('#contact-error').show();
-        return;
-      }
     });
   }
 }

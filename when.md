@@ -1,5 +1,6 @@
 ---
 layout: default
+ref: when
 ---
 
 ##when
@@ -11,7 +12,7 @@ We meet the third Thursday of every month.
 
 Show up a little earlier for Social Pizza&trade;
 
-A group typically goes out for beer afterwards
+A group typically goes out for beer afterwards.
 
 ##where
 

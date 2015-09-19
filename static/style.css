@@ -31,6 +31,11 @@ img {
   margin-bottom: 30px;
 }
 
+#nav-links #meetup-link {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
 #nav-links a {
   font-family: 'Georgia', serif;
   font-style: italic;
